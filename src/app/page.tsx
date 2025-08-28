@@ -5,8 +5,16 @@ import FlipLink from "@/components/ui/text-effect-flipper"
 import { Camera, Globe, Aperture, Linkedin, Instagram } from 'lucide-react'
 import React from 'react'
 import { TextScroll } from '@/components/ui/text-scroll'
+import { CardCarousel } from '@/components/ui/card-carousel'
 
-function page() {
+const page =() =>{
+
+    const images = [
+    { src: "/card-01.jpg", alt: "Image 1" },
+    { src: "/card-02.jpg", alt: "Image 2" },
+    { src: "/card-03.jpg", alt: "Image 3" },
+  ]
+
   return (
     <div>
       <h1 className='text-white'>Home</h1>
@@ -28,6 +36,16 @@ function page() {
           <FlipLink href="/explore">Instagram</FlipLink>  
         </div>
         <div className='h-screen mt-20'> <TextScroll default_velocity={5} className='text-white text-5xl font-bold' text="Loading...   " /></div>
+
+        <div className="pt-40">
+          <CardCarousel
+            className='mt-20'
+            images={images}
+            autoplayDelay={1000}
+            showPagination={true}
+            showNavigation={true}
+          />
+        </div>
     </div>
   )
 }
