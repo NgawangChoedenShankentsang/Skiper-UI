@@ -4,6 +4,7 @@ import WrapButton from '@/components/ui/wrap-button'
 import FlipLink from "@/components/ui/text-effect-flipper"
 import { Camera, Globe, Aperture, Linkedin, Instagram } from 'lucide-react'
 import React from 'react'
+import { TextScroll } from '@/components/ui/text-scroll'
 
 function page() {
   return (
@@ -26,10 +27,7 @@ function page() {
           <FlipLink href="/explore">Facebook</FlipLink>
           <FlipLink href="/explore">Instagram</FlipLink>  
         </div>
-
-        <div className='h-screen border-t-2'></div>
-        <div className='h-screen border-t-2'></div>
-        <div className='h-screen border-t-2'></div>
+        <div className='h-screen mt-20'> <TextScroll default_velocity={5} className='text-white text-5xl font-bold' text="Loading...   " /></div>
     </div>
   )
 }
